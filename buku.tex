@@ -1,0 +1,41 @@
+%
+% Template Laporan Skripsi/Thesis PENS
+%
+% @author  Lucky Mahendra Purba
+% @version 1.0.0
+% @Special thanks to Ichlasul Affan, Azhar Kurnia
+%
+% Dokumen ini dibuat berdasarkan
+% konfigurasi LaTeX yang digunakan Lucky ketika membuat laporan skripsi
+% aturan penulisan skripsi yang dikeluarkan PENS pada tahun 2025,
+%
+
+%
+% Tipe dokumen adalah report dengan satu kolom.
+%
+
+\documentclass[12pt, a4paper, onecolumn, twoside, final]{report}
+\raggedbottom
+
+\usepackage{_internals/pens-book}
+\UseRawInputEncoding
+% Load konfigurasi khusus untuk laporan yang sedang dibuat
+\input{config/settings}
+% Daftar pemenggalan suku kata dan istilah dalam LaTeX
+\include{_internals/hypeindonesia}
+% Daftar istilah yang mungkin perlu ditandai
+%\input{config/istilah}
+% Awal bagian
+\makeglossaries
+\begin{document}
+
+%
+% Sampul Laporan
+%
+\include{_internals/sampul}
+\include{_internals/sampul-putih}
+\ifodd\thechapterpagecount\forceclearchapter\fi
+
+
+
+\end{document}

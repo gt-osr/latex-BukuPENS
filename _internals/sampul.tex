@@ -1,0 +1,85 @@
+%
+% Sampul Laporan
+%
+% @author  Lucky Mahendra
+% @version 1.0.0
+%
+
+%
+% Halaman sampul depan PENS
+%
+
+
+\begin{titlepage}
+	\begin{singlespace*}
+	    \begin{center}
+          \vspace*{-3cm}
+          \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+            \includegraphics[width=3.88cm, height = 3.5cm]{assets/logo/logo_pens.png}
+            & \raisebox{1cm}{\textcolor{blue}{\fontsize{20}{24}\bo{PROYEK AKHIR}}}
+          \end{tabular*}
+	
+	        \vspace*{3.0cm}
+	        % judul thesis harus dalam 14pt Times New Roman
+	        \large
+	        \bo{\Judul} \\[1.0cm]
+		
+			% Sesuaikan spacing agar semua informasi muat dalam satu halaman 
+	        \vspace*{2.5cm}
+	        
+	        % penulis dan nrp
+	        \large
+	        \ifx\blank\nrpDua
+		        \bo{\PenulisSatu} \\
+		        \bo{\nrpSatu} \\
+	        \else
+		        \bo{\PenulisSatu~/ \nrpSatu~/ \ProgramSatu}\\
+		        \bo{\PenulisDua~/ \nrpDua~/ \ProgramDua}\\
+	        \fi
+	        \ifx\blank\nrpTiga\else
+	        	\bo{\PenulisTiga~/ \nrpTiga~/ \ProgramTiga}\\
+	        \fi
+
+            \vspace*{1.0cm}
+
+            \large
+            \bo{DOSEM PEMBIMBING} \\
+            \ifx\blank\pembimbingTiga
+		        \bo{\pembimbingSatu} \\
+		        \bo{\nipPembimbingSatu} \\
+                \vspace*{0.5cm}
+		        \bo{\pembimbingDua} \\
+		        \bo{\nipPembimbingDua} \\
+	        \else
+                \bo{\pembimbingSatu} \\
+		        \bo{\nipPembimbingSatu} \\
+                \vspace*{0.5cm}
+		        \bo{\pembimbingDua} \\
+		        \bo{\nipPembimbingDua} \\
+                \vspace*{0.5cm}
+                \bo{\pembimbingTiga} \\
+		        \bo{\nipPembimbingTiga} \\
+	        \fi
+	        
+	        % Sesuaikan spacing agar semua informasi muat dalam satu halaman 
+	        \vspace*{4.0 cm}
+	
+	        % informasi mengenai fakultas dan program studi
+	        \large
+	        \bo{
+              PROGRAM STUDI SARJANA TERAPAN \\
+	        	\ProgramSatu \\
+                \departemen\\                
+	        }
+
+            \vspace*{1.0cm}
+
+            \large
+            \bo{
+              POLITEKNIK ELEKTRONIKA NEGERI SURABAYA \\
+              2025
+            }
+	        \normalsize
+	    \end{center}
+	\end{singlespace*}
+\end{titlepage}
