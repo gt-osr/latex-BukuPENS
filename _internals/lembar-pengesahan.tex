@@ -1,0 +1,81 @@
+%
+% Lembar Pengesahan Laporan
+%
+% @author  Lucky Mahendra
+% @version 1.0.0
+%
+
+\begin{titlepage}
+  \AddToHookNext{shipout/background}{
+    \begin{tikzpicture}[remember picture,overlay]
+      \node at (current page.center) {
+        \includegraphics[width=\paperwidth, height=\paperheight]
+        {assets/logo/lembar_pengesahan.png}
+      };
+    \end{tikzpicture}
+  }
+  \begin{singlespace*}
+    \begin{center}
+
+      {\fontsize{20}{24}\bo{HALAMAN PENGESAHAN}} \\[1.0cm]
+
+      {\fontsize{14}{14}
+        \bo{\Judul} \\[1.0cm]
+
+        Oleh: \\
+        \bo{\PenulisSatu} \\
+        \bo{\nrpSatu} \\[1.0cm]
+
+        % Paragraf Persyaratan Gelar
+        \begin{minipage}{0.8\textwidth}
+          \centering
+          \bo{Proyek Akhir ini digunakan sebagai salah satu syarat untuk
+            memperolah {\gelar}
+            di Politeknik Elektronika Negeri Surabaya}
+          \\
+          \bo{\tahunSekarang}
+        \end{minipage}
+        \vspace{1cm}
+
+        % Blok Tanda Tangan
+        % Menggunakan \tabular untuk perataan
+
+        \bo{Disetujui oleh:} \\
+        \begin{tabular}{l l l l}
+          % -- Pembimbing 1 --
+          \rule{0pt}{1cm}
+          Pembimbing 1 & : {\pembimbingSatu} & ( & \hspace{3cm} ) \\
+                       & {\hspace{0.25cm}\nipPembimbingSatu} & & \\
+          \rule{0pt}{1cm}
+
+          % -- Pembimbing 2 --
+          Pembimbing 2 & : {\pembimbingDua} & ( & \hspace{3cm} ) \\
+                       & {\hspace{0.25cm}\nipPembimbingDua} & & \\
+          \rule{0pt}{1cm}
+
+          % -- Penguji 1 --
+          Penguji 1    & : {\pengujiSatu} & ( & \hspace{3cm} ) \\
+                       & {\hspace{0.25cm}\nipPengujiSatu} & & \\
+          \rule{0pt}{1cm} %
+
+          % -- Penguji 2 --
+          Penguji 2    & : {\pengujiDua} & ( & \hspace{3cm} ) \\
+                       & {\hspace{0.25cm}\nipPengujiDua} & & \\
+        \end{tabular}
+        \vspace{1cm}
+
+        % Blok Mengetahui (Ketua Program Studi)
+        \begin{center}
+          Mengetahui, \\ %
+          Ketua Program Studi Sarjana Terapan \programSatu \\ %
+          Politeknik Elektronika Negeri Surabaya \\ %
+          \vspace{2cm} % Spasi untuk TTD
+
+          {\bo{\namaKaprodi}} \\ %
+          NIP. ................... %
+        \end{center}
+
+        \normalsize
+      \end{center}
+    \end{singlespace*}
+  \end{titlepage}}
