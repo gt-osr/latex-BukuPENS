@@ -20,7 +20,7 @@
 **/*.synctex(busy)
 **/*.fdb_latexmk
 **/*.fls
-**/*.docs
+**/*.docx
 buku.pdf
 
 # Emacs backup and auto-save files
