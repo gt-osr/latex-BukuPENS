@@ -35,22 +35,20 @@
 \include{_internals/sampul}
 \ifodd\thechapterpagecount\forceclearchapter\fi
 
-\addChapter{Sampul Putih}
 \include{_internals/sampul-putih}
+\ifodd\thechapterpagecount\forceclearchapter\fi
+
+\include{_internals/lembar-pengesahan}
 \ifodd\thechapterpagecount\forceclearchapter\fi
 
 \pagenumbering{roman}
 
-\addChapter{Lembar Pengesahan}
-\include{_internals/lembar-pengesahan}
-\ifodd\thechapterpagecount\forceclearchapter\fi
-
 \addChapter{Pernyataan Orisinalitas}
-\include{_internals/pernyataan-orisinalitas}
+\include{src/00-frontMatter/pernyataan-orisinalitas}
 \ifodd\thechapterpagecount\forceclearchapter\fi
 
 \addChapter{Penyataan HakCipta}
-\include{_internals/pernyataan-hakcipta}
+\include{src/00-frontMatter/pernyataan-hakcipta}
 \ifodd\thechapterpagecount\forceclearchapter\fi
 
 \pagestyle{first-pages}
@@ -58,8 +56,18 @@
 % Abstrak
 %
 \addChapter{Abstrak}
-\include{src/00-frontMatter/abstrak}
 \include{src/00-frontMatter/abstrac}
 \include{src/00-frontMatter/kata-pengantar}
+
+
+%
+% Daftar Isi, Gambar, dan Tabel
+%
+
+\addDefaultListPage{\tableofcontents}
+\addDefaultListPage{\listoffigures}
+\addDefaultListPage{\listoftables}
+
+
 
 \end{document}
