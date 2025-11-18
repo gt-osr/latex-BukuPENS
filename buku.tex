@@ -68,6 +68,19 @@
 \addDefaultListPage{\listoffigures}
 \addDefaultListPage{\listoftables}
 
+% Kembalikan pengaturan chapter dan daftar isi ke aturan awal mulai dari halaman ini
+\noCAPinToC
+\ifodd\thechapterpagecount\clearpage\else\forceclearchapter\fi
+
+%
+% Gunakan penomoran Arab (1, 2, 3, ...) setelah bagian ini.
+%
+\pagenumbering{arabic}
+\pagestyle{standard}
+\setoddevenheader
+\include{src/01-body/bab1}
+
+
 
 
 \end{document}

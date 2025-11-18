@@ -66,7 +66,8 @@
 % The geometry package controls the overall margins and text area of the
 % document. The package must be called in the preamble of the document and
 % specified when called.
-\usepackage[paper=a4paper,headheight=15pt,top=3cm,bottom=3cm,inner=4cm,outer=3cm,twoside]{geometry}
+\usepackage[showframe,paper=a4paper,headheight=15pt,top=3cm,bottom=3cm,inner=4cm,outer=3cm,twoside]{geometry}
+%\usepackage[paper=a4paper,headheight=15pt,top=3cm,bottom=3cm,inner=4cm,outer=3cm,twoside]{geometry} 
 
 % Digunakan untuk mengatur caption dalam dokumen.
 \usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up,justification=centering]{caption}
@@ -224,6 +225,13 @@
   {10pt} % Jarak antara "BAB 1" dan Judul
   {\fontsize{14}{17}\bfseries\MakeUppercase} % Format Judul (Kapital, 14pt, bold)
 \titlespacing*{\chapter}{0pt}{0pt}{65pt} % Mengatur spasi sebelum dan sesudah judul bab
+
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\fontsize{14}{17}\bfseries\centering}
+  {}
+  {0pt}
+  {\fontsize{14}{17}\bfseries\MakeUppercase}
+\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{30pt} % Mengatur spasi sebelum dan sesudah judul bab
 
 % Format Judul Sub-bab (Section)
 % Sesuai panduan: Kapital, Tebal, 12pt 

@@ -18,6 +18,7 @@
     "src/00-frontMatter/pernyataan-hakcipta"
     "src/00-frontMatter/abstrac"
     "src/00-frontMatter/kata-pengantar"
+    "src/01-body/bab1"
     "report"
     "rep12"
     "_internals/pens-book"))
