@@ -16,6 +16,7 @@
     "_internals/lembar-pengesahan"
     "src/00-frontMatter/pernyataan-orisinalitas"
     "src/00-frontMatter/pernyataan-hakcipta"
+    "src/00-frontMatter/abstrak"
     "src/00-frontMatter/abstrac"
     "src/00-frontMatter/kata-pengantar"
     "src/01-body/bab1"

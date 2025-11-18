@@ -222,9 +222,9 @@
 \titleformat{\chapter}[display]
   {\normalfont\fontsize{14}{17}\bfseries\centering} % Format teks judul (14pt, bold, center)
   {\MakeUppercase{\chaptertitlename}\ \thechapter} % Teks "BAB 1" (Kapital)
-  {10pt} % Jarak antara "BAB 1" dan Judul
+  {-15pt} % Jarak antara "BAB 1" dan Judul
   {\fontsize{14}{17}\bfseries\MakeUppercase} % Format Judul (Kapital, 14pt, bold)
-\titlespacing*{\chapter}{0pt}{0pt}{65pt} % Mengatur spasi sebelum dan sesudah judul bab
+\titlespacing*{\chapter}{0pt}{-30pt}{65pt} % Mengatur spasi sebelum dan sesudah judul bab
 
 \titleformat{name=\chapter,numberless}[display]
   {\normalfont\fontsize{14}{17}\bfseries\centering}
@@ -674,9 +674,9 @@
 	\addtocontents{toc}{\protect\addvspace{-1em}}
 	\CAPinToC % All entries in ToC will be CAPITALIZED from here on
 	\phantomsection %hack to make them clickable
-	\singlespacing
+	\setstretch{1.5}
 	#1
-	\setstretch{1.4}
+	\setstretch{1.5}
 }
 \newcommand{\addCustomListPage}[2]
 {
