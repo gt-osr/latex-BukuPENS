@@ -33,12 +33,33 @@
 % Sampul Laporan
 %
 \include{_internals/sampul}
+\ifodd\thechapterpagecount\forceclearchapter\fi
+
+\addChapter{Sampul Putih}
 \include{_internals/sampul-putih}
+\ifodd\thechapterpagecount\forceclearchapter\fi
+
+\pagenumbering{roman}
+
+\addChapter{Lembar Pengesahan}
 \include{_internals/lembar-pengesahan}
+\ifodd\thechapterpagecount\forceclearchapter\fi
+
+\addChapter{Pernyataan Orisinalitas}
 \include{_internals/pernyataan-orisinalitas}
+\ifodd\thechapterpagecount\forceclearchapter\fi
+
+\addChapter{Penyataan HakCipta}
 \include{_internals/pernyataan-hakcipta}
 \ifodd\thechapterpagecount\forceclearchapter\fi
 
-
+\pagestyle{first-pages}
+%
+% Abstrak
+%
+\addChapter{Abstrak}
+\include{src/00-frontMatter/abstrak}
+\include{src/00-frontMatter/abstrac}
+\include{src/00-frontMatter/kata-pengantar}
 
 \end{document}

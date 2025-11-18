@@ -19,6 +19,7 @@
 % to work with the four standard book, report, article and proc classes, and to
 % a limited extent with the ltxdoc class.
 \usepackage{tocbibind}
+\usepackage{indentfirst}
 \usepackage{enumitem}
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -68,8 +69,9 @@
 \usepackage[paper=a4paper,headheight=15pt,top=3cm,bottom=3cm,inner=4cm,outer=3cm,twoside]{geometry}
 
 % Digunakan untuk mengatur caption dalam dokumen.
-%\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up,justification=centering]{caption}
-\usepackage[font={size=11pt},format=plain,labelfont=bf,up,textfont=up,justification=centering]{caption}
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up,justification=centering]{caption}
+\DeclareCaptionFont{11pt}{\fontsize{11}{13}\selectfont}
+\captionsetup{font=11pt}
 
 % Membantu penulisan notasi matematika terutama untuk dokumen dengan banyak
 % rumus.
@@ -88,7 +90,7 @@
 \usepackage{pdflscape}
 
 % Untuk memberikan gambar dengan letak yang absolute (bisa diatur sesuka hati)
-\usepackage[use-geometry]{tikzpagenodes}
+\usepackage{tikzpagenodes}
 
 % Tikz untuk membuat diagram sederhana
 \usepackage{tikz}
@@ -207,7 +209,7 @@
 }
 
 % Pengaturan paragraf
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{10mm}
 \setlength{\parskip} {12pt}
 
 % Atur bullet dan numbering agar tidak ada indentasi awal.
@@ -220,8 +222,8 @@
   {\normalfont\fontsize{14}{17}\bfseries\centering} % Format teks judul (14pt, bold, center)
   {\MakeUppercase{\chaptertitlename}\ \thechapter} % Teks "BAB 1" (Kapital)
   {10pt} % Jarak antara "BAB 1" dan Judul
-  {\MakeUppercase\fontsize{14}{17}\bfseries} % Format Judul (Kapital, 14pt, bold)
-\titlespacing*{\chapter}{0pt}{50pt}{40pt} % Mengatur spasi sebelum dan sesudah judul bab
+  {\fontsize{14}{17}\bfseries\MakeUppercase} % Format Judul (Kapital, 14pt, bold)
+\titlespacing*{\chapter}{0pt}{0pt}{65pt} % Mengatur spasi sebelum dan sesudah judul bab
 
 % Format Judul Sub-bab (Section)
 % Sesuai panduan: Kapital, Tebal, 12pt 
@@ -500,6 +502,24 @@
 }
 
 \newcommand{\forceclearchapter}{\cleardoublepage}
+
+\makeatletter
+\let\orig@cleardoublepage\cleardoublepage
+\renewcommand{\cleardoublepage}{%
+  \clearpage
+  \if@twoside
+    \ifodd\c@page
+      \orig@cleardoublepage
+    \else
+      \hbox{}%
+      \input{_internals/halaman-kosong.tex}%
+      \orig@cleardoublepage
+    \fi
+  \else
+    \orig@cleardoublepage
+  \fi
+}
+\makeatother
 
 % Alias untuk mengatur ulang konfigurasi footer setiap awal bab
 \newcommand{\setfirstheaderfooter}{
